@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\VendorController;
+// use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +20,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
+//admin
+Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
+Route::get('/dashboard',[AdminController::class,'admin'])->name('admin');
+
+});
+//vendor
+Route::group(['prefix'=>'vendor','middleware'=>'auth'],function(){
+    Route::get('/dashboard',[VendorController::class,'vendor'])->name('vendor');
+
+    });
 
 require __DIR__.'/auth.php';
