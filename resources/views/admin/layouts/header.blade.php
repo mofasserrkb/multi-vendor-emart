@@ -18,11 +18,19 @@
 <link rel="stylesheet" href="{{asset('assets/vendor/jvectormap/jquery-jvectormap-2.0.3.min.css')}}">
  <link rel="stylesheet" href="{{asset('assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')}}">
 <link rel="stylesheet" href="{{asset('assets/vendor/morrisjs/morris.min.css')}}" >
+<link rel="stylesheet" href="{{asset('assets/vendor/jquery-datatable/dataTables.bootstrap4.min.css')}}">
+<!-- new add vendor css -->
+<link rel="stylesheet" href="{{asset('assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')}}">
+<link rel="stylesheet" href="{{asset('assets/vendor/dropify/css/dropify.min.css')}}">
+<!--summer note-->
+<!-- include summernote css/js -->
+<link href="{{asset('assets/vendor/summernote/dist/summernote.css')}}" rel="stylesheet">
 
 
 <!-- MAIN CSS -->
 <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
 <link rel="stylesheet" href="{{asset('assets/css/color_skins.css')}}">
+
 <style>
     .icon-menu:before{display:none !important};
 </style>

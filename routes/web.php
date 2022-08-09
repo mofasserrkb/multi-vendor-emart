@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\VendorController;
 // use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
@@ -26,7 +27,7 @@ Route::get('/', function () {
 //admin
 Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 Route::get('/dashboard',[AdminController::class,'admin'])->name('admin');
-
+Route::resource('banner', BannerController::class);
 });
 //vendor
 Route::group(['prefix'=>'vendor','middleware'=>'auth'],function(){

@@ -13,7 +13,7 @@ class BannerController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        return view('admin.banner.index');
     }
 
     /**
@@ -24,6 +24,7 @@ class BannerController extends Controller
     public function create()
     {
         //
+        return view('admin.banner.create');
     }
 
     /**
@@ -34,7 +35,9 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         dd($request->all());
+        //  dd($request)->file('image');
+        // return $request->all();
     }
 
     /**
